@@ -2,22 +2,7 @@ name: Desktop packages
 
 on:
   push:
-    branches: [main]
-    paths-ignore:
-      - 'docs/**'
-      - 'docs-site/**'
-      - 'scripts/capture-documentation.py'
-  pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - 'docs-site/**'
-      - 'scripts/capture-documentation.py'
-  workflow_dispatch:
-    inputs:
-      all_platforms:
-        description: Build all native platforms for a stable release
-        type: boolean
-        default: false
+    branches: [ci/p553-windows-package]
 
 permissions:
   contents: read
@@ -42,6 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: 68b9bc3cb54e3dac826c728da17f5fb88837d4cf
           persist-credentials: false
           # Include both parents of the merge commit being tested.
           fetch-depth: 2
@@ -67,6 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: 68b9bc3cb54e3dac826c728da17f5fb88837d4cf
           persist-credentials: false
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -160,6 +147,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: 68b9bc3cb54e3dac826c728da17f5fb88837d4cf
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -200,6 +188,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: 68b9bc3cb54e3dac826c728da17f5fb88837d4cf
           persist-credentials: false
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -347,6 +336,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: 68b9bc3cb54e3dac826c728da17f5fb88837d4cf
           persist-credentials: false
       - name: Verify Windows package and replace preview prerelease
         run: python3 scripts/ci_preview_release.py
