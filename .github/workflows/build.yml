@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: a278202d335a06f62ab192750f1dda49a2231178
+          ref: 16cbc351f91941dbd170d6534ae5fc7814e7c3fd
           persist-credentials: false
           # Include both parents of the merge commit being tested.
           fetch-depth: 2
@@ -53,7 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: a278202d335a06f62ab192750f1dda49a2231178
+          ref: 16cbc351f91941dbd170d6534ae5fc7814e7c3fd
           persist-credentials: false
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -147,7 +147,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: a278202d335a06f62ab192750f1dda49a2231178
+          ref: 16cbc351f91941dbd170d6534ae5fc7814e7c3fd
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -188,7 +188,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: a278202d335a06f62ab192750f1dda49a2231178
+          ref: 16cbc351f91941dbd170d6534ae5fc7814e7c3fd
           persist-credentials: false
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -336,7 +336,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: a278202d335a06f62ab192750f1dda49a2231178
+          ref: 16cbc351f91941dbd170d6534ae5fc7814e7c3fd
           persist-credentials: false
       - name: Verify Windows package and replace preview prerelease
         run: python3 scripts/ci_preview_release.py
